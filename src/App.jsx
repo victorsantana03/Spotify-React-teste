@@ -6,11 +6,11 @@ import Artist from "./pages/Artist"
 import Songs from "./pages/Songs"
 import Song from "./pages/Song"
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/songs" element={<Songs />}/>
         <Route path="/song/:id" element={<Song />}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
 
   );
 };
